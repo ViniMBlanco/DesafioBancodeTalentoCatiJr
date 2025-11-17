@@ -77,4 +77,10 @@ Contudo, eles não aparecem no GitHub por conta de utilizar a biblioteca *plotly
 ├── data/                   # Diretório para o conjunto de dados ( train.csv).
 ```
 
+## 🤖 Modelo Preditivo
+
+Com os padrões identificados,como a influência da qualidade geral, área habitável e localização, já é possível construir um modelo para prever o SalePrice. Para esse dataset, modelos como Random Forest ou Gradient Boosting(XGBoost ou LightGBM) funcionam melhor que uma regressão linear por capturarem relações não lineares entre as variáveis.
+
+Mesmo com um train.csv e um test.csv, a validação deve ser feita dentro do próprio treinamento usando k-fold cross-validation, garantindo que o desempenho seja estável em diferentes partes dos dados. Métricas como RMSE e R² avaliam quão próximas as previsões ficam do valor real, enquanto técnicas de regularização ajudam a evitar overfitting antes de aplicar o modelo ao test.csv final.
+
 
